@@ -46,13 +46,23 @@ public class Book {
         this.title = title;
     }
 
-    public static void setCheckedOut(boolean checkedOut) {
+    public void setCheckedOut(boolean checkedOut) {
         isCheckedOut = checkedOut;
     }
 
     public void setCheckedOutTo(String checkedOutTo) {
         this.checkedOutTo = checkedOutTo;
     }
+    public void checkOut(String name) {
+        setCheckedOutTo(name);
+        setCheckedOut(true);
+    }
+    // check in method
+    public void checkIn() {
+        setCheckedOutTo("");
+        setCheckedOut(false);
+    }
+
 }
 
 
